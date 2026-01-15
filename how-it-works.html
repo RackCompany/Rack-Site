@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How it Works — YOUR_APP_NAME</title>
+  <style>
+:root {
+  --bg: #0b0c10;
+  --card: #12141b;
+  --text: #e9ecf1;
+  --muted: #a8b0bf;
+  --accent: #7c5cff;
+  --border: rgba(255,255,255,0.10);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; background: var(--bg); color: var(--text); }
+a { color: inherit; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 980px; margin: 0 auto; padding: 24px; }
+.nav {
+  display: flex; gap: 14px; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border); padding: 14px 0; margin-bottom: 18px;
+}
+.nav .brand { font-weight: 700; letter-spacing: 0.3px; }
+.nav .links { display: flex; gap: 14px; flex-wrap: wrap; }
+.pill {
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 8px 12px; border: 1px solid var(--border); border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+}
+.pill strong { color: var(--accent); font-weight: 700; }
+.hero {
+  padding: 26px; border: 1px solid var(--border); border-radius: 18px;
+  background: linear-gradient(180deg, rgba(124,92,255,0.14), rgba(255,255,255,0.02));
+}
+.hero h1 { margin: 0 0 10px; font-size: 34px; line-height: 1.12; }
+.hero p { margin: 0 0 18px; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.ctas { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+.btn {
+  display:inline-flex; align-items:center; justify-content:center;
+  padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06); font-weight: 600;
+}
+.btn.primary { background: var(--accent); border-color: rgba(124,92,255,0.5); color: #0b0c10; }
+.btn.primary:hover { filter: brightness(1.08); text-decoration: none; }
+.btn:hover { text-decoration: none; background: rgba(255,255,255,0.09); }
+.grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px; margin-top: 16px; }
+.card {
+  grid-column: span 6;
+  padding: 16px; border: 1px solid var(--border); border-radius: 16px;
+  background: var(--card);
+}
+@media (max-width: 860px) { .card { grid-column: span 12; } }
+.card h2 { margin: 0 0 8px; font-size: 16px; }
+.card p { margin: 0; color: var(--muted); line-height: 1.6; }
+.section { margin-top: 18px; }
+.section h2 { font-size: 18px; margin-bottom: 8px; }
+.section p, .section li { color: var(--muted); line-height: 1.7; }
+.section ul { margin: 10px 0 0 18px; }
+.footer {
+  margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border);
+  color: var(--muted); font-size: 13px; line-height: 1.6;
+}
+.small { font-size: 13px; color: var(--muted); }
+hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+code { background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 8px; }
+</style>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand"><a href="index.html">YOUR_APP_NAME</a></div>
+      <div class="links">
+        <a class="pill" href="how-it-works.html">How it Works</a>
+<a class="pill" href="about.html">About</a>
+<a class="pill" href="faq.html">FAQ</a>
+<a class="pill" href="terms.html">Terms</a>
+<a class="pill" href="privacy.html">Privacy</a>
+<a class="pill" href="contact.html">Contact</a>
+      </div>
+    </div>
+    
+<div class="hero">
+  <h1>How it works</h1>
+  <p>We help users discover items across retailers and send them to the seller’s site to complete the purchase.</p>
+</div>
+
+<div class="section">
+  <h2>1) Product data ingestion</h2>
+  <ul>
+    <li>We use authorized sources (affiliate feeds, partner APIs, or licensed catalog providers).</li>
+    <li>We store product metadata such as title, brand, price, availability, category, and product URL.</li>
+    <li>We only display product images when usage is permitted by the relevant program terms.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>2) Enrichment for better search</h2>
+  <ul>
+    <li>We normalize attributes (e.g., color families, materials, fits) for consistent filters.</li>
+    <li>We may use AI to generate structured tags from permitted text fields to improve search relevance.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>3) Discovery + recommendations</h2>
+  <ul>
+    <li>Users browse a personalized feed based on saves, likes, and search activity.</li>
+    <li>Users can control personalization and reset recommendations.</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>4) Link-out purchase</h2>
+  <ul>
+    <li>When a user selects an item, we send them directly to the retailer’s product page.</li>
+    <li>We do not process payments or fulfill orders.</li>
+  </ul>
+</div>
+
+    <div class="footer">
+      <div><b>YOUR_APP_NAME</b> • Contact: <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a></div>
+      <div>All trademarks and product images are the property of their respective owners. Not affiliated with brands shown.</div>
+    </div>
+  </div>
+</body>
+</html>
