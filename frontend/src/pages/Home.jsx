@@ -44,17 +44,8 @@ export default function Home() {
   return (
     <div data-testid="home-page">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1746864946956-0c047289abaf?crop=entropy&cs=srgb&fm=jpg&q=85&w=1920"
-            alt="Fashion"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <section className="relative min-h-[70vh] flex items-center bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-2xl">
             <h1 
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A0A0A] leading-tight animate-fade-in-up"
@@ -152,7 +143,7 @@ export default function Home() {
       {/* For Brands Section */}
       <section className="py-24 bg-[#F2F4F3]" data-testid="for-brands-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-3xl mx-auto">
             <div>
               <h2 
                 className="text-3xl sm:text-4xl font-bold text-[#0A0A0A]"
@@ -201,14 +192,6 @@ export default function Home() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-            </div>
-
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1769107805412-90d9191d53e9?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                alt="Modern boutique interior"
-                className="rounded-md shadow-sm"
-              />
             </div>
           </div>
         </div>
