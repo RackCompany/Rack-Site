@@ -172,6 +172,14 @@ export default function HowItWorks() {
                 className="rounded-md shadow-sm"
               />
             </div>
+
+            <div className="relative">
+              <img
+                src="https://images.unsplash.com/photo-1687226426209-0e5d2143c0d1?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+                alt="Clean clothing rack"
+                className="rounded-md shadow-sm"
+              />
+            </div>
           </div>
         </div>
       </section>
