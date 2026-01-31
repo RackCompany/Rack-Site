@@ -1,18 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Search, Link2, ShoppingBag, Shield, CheckCircle2, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import axios from "axios";
-import { toast } from "sonner";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     // Handle hash navigation for waitlist section
     if (window.location.hash === "#waitlist") {
@@ -21,25 +12,6 @@ export default function Home() {
       }, 100);
     }
   }, []);
-
-  const handleWaitlistSubmit = async (e) => {
-    e.preventDefault();
-    if (!email) {
-      toast.error("Please enter your email");
-      return;
-    }
-    
-    setLoading(true);
-    try {
-      const response = await axios.post(`${API}/waitlist`, { email });
-      toast.success(response.data.message);
-      setEmail("");
-    } catch (error) {
-      toast.error(error.response?.data?.detail || "Something went wrong");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div data-testid="home-page">
@@ -233,24 +205,17 @@ export default function Home() {
             Be the first to experience a smarter way to discover fashion. Early access coming soon.
           </p>
           
-          <form onSubmit={handleWaitlistSubmit} className="mt-8 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="h-12 bg-white/10 border-white/20 text-white placeholder:text-gray-500 rounded-md flex-1"
-              data-testid="waitlist-email-input"
-            />
-            <Button 
-              type="submit"
-              disabled={loading}
-              className="bg-[#8DA399] hover:bg-[#7A8F85] text-white rounded-md px-8 h-12"
-              data-testid="waitlist-submit-btn"
-            >
-              {loading ? "Joining..." : "Join Waitlist"}
-            </Button>
-          </form>
+          <div className="mt-8">
+            <a href="mailto:contact@rack-app.info?subject=Waitlist%20Signup&body=I'd%20like%20to%20join%20the%20RACK%20waitlist.">
+              <Button 
+                className="bg-[#8DA399] hover:bg-[#7A8F85] text-white rounded-md px-8 h-12"
+                data-testid="waitlist-submit-btn"
+              >
+                Join Waitlist
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+          </div>
           
           <p className="mt-4 text-xs text-gray-500">
             We respect your privacy. No spam, ever.
