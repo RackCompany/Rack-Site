@@ -105,7 +105,7 @@ export default function HowItWorks() {
       {/* Data Sources Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-3xl mx-auto">
             <div>
               <h2 
                 className="text-3xl sm:text-4xl font-bold text-[#0A0A0A]"
@@ -163,22 +163,6 @@ export default function HowItWorks() {
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1687226426209-0e5d2143c0d1?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                alt="Clean clothing rack"
-                className="rounded-md shadow-sm"
-              />
-            </div>
-
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1687226426209-0e5d2143c0d1?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                alt="Clean clothing rack"
-                className="rounded-md shadow-sm"
-              />
             </div>
           </div>
         </div>
