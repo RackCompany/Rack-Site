@@ -1,19 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail } from "lucide-react";
 
-const footerLinks = {
-  platform: [
-    { href: "/how-it-works", label: "How it Works" },
-    { href: "/for-brands", label: "For Brands" },
-    { href: "/about", label: "About" },
-    { href: "/faq", label: "FAQ" },
-  ],
-  legal: [
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
-  ],
-};
-
 export default function Footer() {
   return (
     <footer className="bg-[#F2F4F3] border-t border-[#E4E4E7]">
@@ -49,17 +36,42 @@ export default function Footer() {
               Platform
             </h4>
             <ul className="space-y-3">
-              {footerLinks.platform.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
-                    data-testid={`footer-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/how-it-works"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-how-it-works"
+                >
+                  How it Works
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/for-brands"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-for-brands"
+                >
+                  For Brands
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-about"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-faq"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -69,17 +81,24 @@ export default function Footer() {
               Legal
             </h4>
             <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
-                    data-testid={`footer-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-privacy-policy"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-sm text-[#71717A] hover:text-[#0A0A0A] transition-colors"
+                  data-testid="footer-terms-of-service"
+                >
+                  Terms of Service
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/contact"
